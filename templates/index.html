@@ -1,14 +1,53 @@
-<!-- templates/index.html -->
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Random Quote</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        em {
+            font-style: normal;
+            color: #555;
+        }
+
+        .timestamp {
+            margin-top: 30px;
+            color: #777;
+        }
+    </style>
 </head>
-
 <body>
-    <h1>Random Quote</h1>
-    <p>{{ quote }}</p>
+    <div class="container">
+        <h1>Random Quote of the Day</h1>
+        <p>"{{ quote }}"</p>
+        <em>- {{ author }}</em>
+        <p class="timestamp">Generated at: {{ current_time }}</p>
+    </div>
 </body>
-
 </html>
